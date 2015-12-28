@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Convert to slim'
+      'command': 'html2slim:convert'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'html2slim'
+      'submenu': [
+        {
+          'label': 'Convert'
+          'command': 'html2slim:convert'
+        }
+      ]
+    ]
+  }
+]
