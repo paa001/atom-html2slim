@@ -3,8 +3,7 @@
   "main": "./lib/html2slim",
   "version": "0.0.1",
   "description": "Convert erb to slim templates",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "html2slim:convert"
   },
@@ -13,6 +12,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
