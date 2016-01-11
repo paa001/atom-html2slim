@@ -1,7 +1,7 @@
 {
   "name": "html2slim",
   "main": "./lib/html2slim",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Convert erb to slim templates",
   "keywords": [],
   "activationCommands": {
