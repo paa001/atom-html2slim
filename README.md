@@ -1,10 +1,10 @@
-# Atom wrapper for erb2slim gem
+# Atom wrapper for html2slim gem
 
 ![A screenshot of your package](https://raw.githubusercontent.com/paa001/atom-html2slim/master/readme.gif)
 
 ## Install
 
-<code>gem install erb2slim</code>
+<code>gem install html2slim</code>
 
 and
 
