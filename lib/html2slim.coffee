@@ -5,6 +5,10 @@ exec = require('child_process').exec
 module.exports = Html2slim =
   subscriptions: null
   whitelist: ['.html', '.erb']
+  config:
+    executePath:
+      type: 'string'
+      default: 'erb2slim'
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
@@ -24,7 +28,8 @@ module.exports = Html2slim =
       editor.notificationManager.addError("Converting only #{@whitelist} files")
       return
 
-    exec "erb2slim #{filePath} #{resultFile}", (error, stdout, stderr) ->
+    execCommand = atom.config.get('html2slim.executePath')
+    exec "#{execCommand} #{filePath} #{resultFile}", (error, stdout, stderr) ->
       if stderr
         editor.notificationManager.addError(stderr)
         exec "rm #{resultFile}", {}
