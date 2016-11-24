@@ -25,15 +25,15 @@ module.exports = Html2slim =
     resultFile = "#{sourceFileObj.dir}/#{sourceFileObj.name}.slim"
 
     unless (sourceFileObj.ext in @whitelist)
-      editor.notificationManager.addError("Converting only #{@whitelist} files")
+      atom.notifications.addError("Converting only #{@whitelist} files")
       return
 
     execCommand = atom.config.get('html2slim.executePath')
     exec "#{execCommand} #{filePath} #{resultFile}", (error, stdout, stderr) ->
       if stderr
-        editor.notificationManager.addError(stderr)
+        atom.notifications.addError(stderr)
         exec "rm #{resultFile}", {}
         return
 
-      editor.notificationManager.addInfo(stdout) if stdout
+      atom.notifications.addInfo(stdout) if stdout
       atom.workspace.open(resultFile)
