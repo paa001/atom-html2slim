@@ -5,8 +5,7 @@
   "description": "Convert erb to slim templates",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "html2slim:convert",
-    "atom-workspace": "html2slim:convert-selection"
+    "atom-workspace": ["html2slim:convert", "html2slim:convert-selection"]
   },
   "repository": "https://github.com/paa001/atom-html2slim.git",
   "license": "MIT",
